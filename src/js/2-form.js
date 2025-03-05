@@ -17,7 +17,6 @@ function onFormInput(event) {
         formData.message = event.target.value;
     }    
     localStorage.setItem(STORAGE_KEY, JSON.stringify(formData));
-    // console.log(formData);
 }
 
 
@@ -28,7 +27,6 @@ function dataFromLocalStorage() {
     }
     savedMsg.trim();
     const parsedMsg = JSON.parse(savedMsg); 
-    console.log(parsedMsg);
     Object.keys(parsedMsg).forEach((key) => {
         formData[key] = parsedMsg[key];
     });

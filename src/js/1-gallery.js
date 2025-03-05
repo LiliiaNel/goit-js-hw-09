@@ -86,8 +86,8 @@ function createGalleryMarkup(images) {
 }
 
 
-let gallery = new SimpleLightbox('.gallery a');
-gallery.on('show.simplelightbox', function () {
-  open;
-  next;
-});
+let options = {
+  captionsData: "alt",
+  captionDelay: 250,
+};
+new SimpleLightbox('.gallery a', options);
