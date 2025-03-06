@@ -30,7 +30,8 @@ function dataFromLocalStorage() {
     Object.keys(parsedMsg).forEach((key) => {
         formData[key] = parsedMsg[key];
     });
-    
+    email.value = formData.email;
+    message.value = formData.message;
 }
 
 
@@ -44,6 +45,8 @@ function onFormSubmit(event) {
         localStorage.removeItem(STORAGE_KEY);
         const targetForm = event.currentTarget;
         targetForm.reset();
+        formData.email = "";
+        formData.message = "";
     }
    
 }
